@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="scroll-smooth">
+    <nav
+      class="bg-white h-[90px] flex items-center justify-center border-b border-primary"
+    >
+      <div
+        class="h-12.5 px-[75px] w-7xl mx-auto flex flex-row items-center justify-between"
+      >
+        <div class="flex flex-row gap-[50px] items-center">
+          <a class="flex flex-row gap-2 items-center" href="/">
+            <img class="w-10 h-10" src="./images/obito.svg" alt="Obito Logo" />
+            <span class="text-[#0A0723] font-extrabold text-2xl">Obito</span>
+          </a>
+
+          <ul class="flex flex-row gap-10">
+            <li>
+              <a class="text-base font-semibold" href="/home">Home</a>
+            </li>
+
+            <li>
+              <a class="text-base font-normal" href="/pricing">Pricing</a>
+            </li>
+
+            <li>
+              <a class="text-base font-normal" href="/features">Features</a>
+            </li>
+
+            <li>
+              <a class="text-base font-normal" href="/testimonials"
+                >Testimonials</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-row items-center gap-5">
+          <a href="/" class="flex items-center">
+            <img
+              class="w-6 h-6"
+              src="./images/device-message.svg"
+              alt="Device Message"
+            />
+          </a>
+
+          <div class="border-l border-primary h-12"></div>
+
+          <div class="flex flex-row items-center gap-3">
+            <a
+              class="w-[102px] h-12 bg-white border border-primary rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100"
+              href="/signup"
+            >
+              Sign Up
+            </a>
+
+            <a
+              class="w-[137px] h-12 bg-button-primary rounded-full flex items-center justify-center text-white hover:bg-[#25564f]"
+              href="/my-account"
+            >
+              My Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bg-primary flex-1 flex flex-row w-7xl mx-auto">
+      <form
+        class="bg-white my-12.5 w-[510px] h-full rounded-[20px] stroke-1 stroke-primary mx-[75px]"
+      >
+        <div class="px-5 flex flex-col gap-4 my-5">
+          <h1 class="font-semibold text-[22px] pb-4">Upgrade Your Skills</h1>
+
+          <div class="relative w-[90px] h-[90px]">
+            <div
+              id="image-preview"
+              class="cursor-pointer w-full h-full flex flex-col items-center justify-center group relative"
+            >
+              <div
+                class="absolute inset-0 rounded-full border border-primary overflow-hidden"
+              ></div>
+              <span
+                class="relative w-12 z-10 text-center text-sm font-semibold"
+                id="addPhotoText"
+              >
+                Add Photo
+              </span>
+            </div>
+            <input class="hidden" id="upload" type="file" accept="image/*" />
+          </div>
+
+          <div>
+            <label for="name" class="block mb-2 text-base font-normal"
+              >Complete Name</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1334 9.05833C10.05 9.05 9.95005 9.05 9.85838 9.05833C7.87505 8.99166 6.30005 7.36666 6.30005 5.36666C6.30005 3.325 7.95005 1.66666 10 1.66666C12.0417 1.66666 13.7 3.325 13.7 5.36666C13.6917 7.36666 12.1167 8.99166 10.1334 9.05833Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.96672 12.1333C3.95006 13.4833 3.95006 15.6833 5.96672 17.025C8.25839 18.5583 12.0167 18.5583 14.3084 17.025C16.3251 15.675 16.3251 13.475 14.3084 12.1333C12.0251 10.6083 8.26672 10.6083 5.96672 12.1333Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="name"
+                class="border border-primary text-base font-semibold rounded-full w-full h-13 block ps-10 p-2 focus:outline-1 focus:outline-buttonbg-button-primary placeholder:font-normal"
+                placeholder="Type your valid email address"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="occupation" class="block mb-2 text-base font-normal"
+              >Occupation</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.66673 18.3333H13.3334C16.6834 18.3333 17.2834 16.9917 17.4584 15.3583L18.0834 8.69167C18.3084 6.65833 17.7251 5 14.1667 5H5.83339C2.27506 5 1.69173 6.65833 1.91673 8.69167L2.54173 15.3583C2.71673 16.9917 3.31673 18.3333 6.66673 18.3333Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.66663 5V4.33333C6.66663 2.85833 6.66663 1.66667 9.33329 1.66667H10.6666C13.3333 1.66667 13.3333 2.85833 13.3333 4.33333V5"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.6667 10.8333V11.6667C11.6667 11.675 11.6667 11.675 11.6667 11.6833C11.6667 12.5917 11.6584 13.3333 10 13.3333C8.35004 13.3333 8.33337 12.6 8.33337 11.6917V10.8333C8.33337 10 8.33337 10 9.16671 10H10.8334C11.6667 10 11.6667 10 11.6667 10.8333Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.0416 9.16667C16.1166 10.5667 13.9166 11.4 11.6666 11.6833"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2.18335 9.39167C4.05835 10.675 6.17502 11.45 8.33335 11.6917"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="occupation"
+                class="border border-primary text-base font-semibold rounded-full w-full h-13 block ps-10 p-2 focus:outline-1 focus:outline-buttonbg-button-primary placeholder:font-normal"
+                placeholder="Programmer"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block mb-2 text-base font-normal"
+              >Email Address</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.1666 17.0833H5.83329C3.33329 17.0833 1.66663 15.8333 1.66663 12.9167V7.08333C1.66663 4.16666 3.33329 2.91666 5.83329 2.91666H14.1666C16.6666 2.91666 18.3333 4.16666 18.3333 7.08333V12.9167C18.3333 15.8333 16.6666 17.0833 14.1666 17.0833Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.1667 7.5L11.5584 9.58333C10.7 10.2667 9.2917 10.2667 8.43337 9.58333L5.83337 7.5"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <input
+                type="email"
+                id="email"
+                class="border border-primary text-base font-semibold rounded-full w-full h-13 block ps-10 p-2 focus:outline-1 focus:outline-buttonbg-button-primary placeholder:font-normal"
+                placeholder="Type your valid email address"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="password" class="block mb-2 text-base font-normal"
+              >Password</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.74167 1.85833L4.58334 3.425C3.62501 3.78333 2.84167 4.91666 2.84167 5.93333V12.125C2.84167 13.1083 3.49167 14.4 4.28334 14.9917L7.86667 17.6667C9.04167 18.55 10.975 18.55 12.15 17.6667L15.7333 14.9917C16.525 14.4 17.175 13.1083 17.175 12.125V5.93333C17.175 4.90833 16.3917 3.775 15.4333 3.41666L11.275 1.85833C10.5667 1.6 9.43334 1.6 8.74167 1.85833Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 10.4167C10.9205 10.4167 11.6667 9.67047 11.6667 8.74999C11.6667 7.82952 10.9205 7.08333 10 7.08333C9.07957 7.08333 8.33337 7.82952 8.33337 8.74999C8.33337 9.67047 9.07957 10.4167 10 10.4167Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 10.4167V12.9167"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <input
+                type="password"
+                id="password"
+                class="border border-primary text-base font-semibold rounded-full w-full h-13 block ps-10 p-2 focus:outline-1 focus:outline-buttonbg-button-primary placeholder:font-normal"
+                placeholder="Type your valid email address"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="confirm-password"
+              class="block mb-2 text-base font-normal"
+              >Confirm Password</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.74167 1.85833L4.58334 3.425C3.62501 3.78333 2.84167 4.91666 2.84167 5.93333V12.125C2.84167 13.1083 3.49167 14.4 4.28334 14.9917L7.86667 17.6667C9.04167 18.55 10.975 18.55 12.15 17.6667L15.7333 14.9917C16.525 14.4 17.175 13.1083 17.175 12.125V5.93333C17.175 4.90833 16.3917 3.775 15.4333 3.41666L11.275 1.85833C10.5667 1.6 9.43334 1.6 8.74167 1.85833Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 10.4167C10.9205 10.4167 11.6667 9.67047 11.6667 8.74999C11.6667 7.82952 10.9205 7.08333 10 7.08333C9.07957 7.08333 8.33337 7.82952 8.33337 8.74999C8.33337 9.67047 9.07957 10.4167 10 10.4167Z"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 10.4167V12.9167"
+                    stroke="#0A0723"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <input
+                type="password"
+                id="confirm-password"
+                class="border border-primary text-base font-semibold rounded-full w-full h-13 block ps-10 p-2 focus:outline-1 focus:outline-buttonbg-button-primary placeholder:font-normal"
+                placeholder="Type your valid email address"
+              />
+            </div>
+          </div>
+
+          <button
+            class="cursor-pointer text-base text-white font-semibold bg-button-primary hover:bg-[#25564f] w-full h-13 rounded-full"
+            type="button"
+          >
+            Create My Account
+          </button>
+        </div>
+      </form>
+
+      <section class="flex-1 flex justify-end">
+        <img
+          src="./images/image-signup.svg"
+          alt="Image Signup"
+          class="object-fill w-full"
+        />
+      </section>
+    </main>
+  </body>
+
+  <script src="./js/upload-image.js"></script>
+</html>
