@@ -35,12 +35,11 @@ Follow these steps to set up the project:
 ## Usage
 
 - Go Live with Live Server in Visual Studio Code.
-- Access the application in your browser at `http://127.0.0.1:5500/src/pages/signup.html`.
+- Access the application in your browser at `http://127.0.0.1:5500/public/index.html`.
 
 ## Project Structure
 
-- **dist**: Contains the compiled files.
-- **public**: Contains the public files.
+- **public/dist**: Contains the compiled files.
+- **public/images**: Contains the images.
+- **public/js**: Contains the JavaScript files.
 - **src/css**: Contains the CSS files.
-- **src/js**: Contains the JavaScript files.
-- **src/pages**: Contains the HTML files.
